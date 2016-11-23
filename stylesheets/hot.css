@@ -1292,7 +1292,7 @@ body.vjs-full-window {
 .video-js .vjs-progress-control .vjs-mouse-display {
   display: none;
   position: absolute;
-  width: 1px;
+  width: 40px;
   height: 100%;
   background-color: #000;
   z-index: 1;
