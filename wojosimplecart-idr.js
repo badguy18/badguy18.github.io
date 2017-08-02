@@ -59,6 +59,7 @@ function Cart(){
 	me.events = {};
 	me.sandbox = false;
 	me.paypalHTTPMethod = "GET";
+	me._input = "";
 	/*
 		cart headers:
 		you can set these to which ever order you would like, and the cart will display the appropriate headers
