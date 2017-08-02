@@ -774,7 +774,7 @@ function Cart(){
 			case SGD:
 				return "&#36;";
 			case VND:
-				return "VND";
+				return "&VND";
 			default:
 				return "";
 		}
