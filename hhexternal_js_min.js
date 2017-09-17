@@ -383,7 +383,7 @@ function change(data) {
 	var k = g[0].querySelectorAll('img');
 	var l = g[0].querySelectorAll('.title-overlay');
 	var d = data.values; 
-	if (typeof(Storage) !== "undefined") {localStorage.setItem("data",window.btoa(JSON.stringify(d)));}
+	if (typeof(Storage) !== "undefined") {localStorage.setItem("data",window.btoa(unescape(encodeURIComponent(JSON.stringify(d))));}
 	for (var i = 0; i < k.length; i++) {
 		if (k[i].naturalWidth == 120 && k[i].naturalHeight == 90) {
 			for (var j = 0; j < d.length; j++) {
