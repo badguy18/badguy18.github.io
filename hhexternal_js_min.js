@@ -101,7 +101,7 @@ function getdata(result) {
 
 function result(data, status) {
 	var d = data.values; 
-	if (typeof(Storage) !== "undefined") {localStorage.setItem("data",window.btoa(JSON.stringify(d)));}
+	if (typeof(Storage) !== "undefined") {localStorage.setItem("data",window.btoa(unescape(encodeURIComponent(JSON.stringify(d)))));}
 	var h = document.querySelector(".post-title .entry-title").textContent.trim();
 	var ids = [];
 	var c = 0;
@@ -344,7 +344,7 @@ function relatedImageChange(data) {
 	var m = n[0].querySelectorAll('img');
 	var o = $('.related-title');
 	var d = data.values; 
-	if (typeof(Storage) !== "undefined") {localStorage.setItem("data",window.btoa(JSON.stringify(d)));}	
+	if (typeof(Storage) !== "undefined") {localStorage.setItem("data",window.btoa(unescape(encodeURIComponent(JSON.stringify(d)))));}	
 	for (var i = 0; i < m.length; i++) {
 		if (m[i].src.search("youtube") != -1 || m[i].src.search("ytimg" != -1)) {
 			if (m[i].naturalWidth == 120 && m[i].naturalHeight == 90) {
