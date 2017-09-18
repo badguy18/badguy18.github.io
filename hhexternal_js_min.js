@@ -328,7 +328,7 @@ function getdata2() {
 			if (m[i].src.search("youtube") != -1 || m[i].src.search("ytimg" != -1)) {
 				if (m[i].naturalWidth == 120 && m[i].naturalHeight == 90) {
 					for (var j = 0; j < d.length; j++) {
-						if (d[j][1] == o[i].textContent) {
+						if (d[j][1] == o[i].textContent.trim()) {
 							m[i].src = 'https://i.ytimg.com/vi/' + d[j][0] + '/0.jpg';
 						}
 					}
@@ -349,7 +349,7 @@ function relatedImageChange(data) {
 		if (m[i].src.search("youtube") != -1 || m[i].src.search("ytimg" != -1)) {
 			if (m[i].naturalWidth == 120 && m[i].naturalHeight == 90) {
 				for (var j = 0; j < d.length; j++) {
-					if (d[j][1] == o[i].textContent) {
+					if (d[j][1] == o[i].textContent.trim()) {
 						m[i].src = 'https://i.ytimg.com/vi/' + d[j][0] + '/0.jpg';
 					}
 				}
