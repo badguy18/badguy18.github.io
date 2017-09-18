@@ -72,7 +72,7 @@ function getYid() {
 
 function getdata(result) {
 	if(localStorage.data != undefined) {
-		var d=JSON.parse(window.atob(localStorage.data)); 
+		var d=JSON.parse(decodeURIComponent(escape(window.atob(localStorage.data)))); 
 		var h = document.querySelector(".post-title, .entry-title").textContent.trim();		
 		var ids = [];
 		var c = 0;
@@ -320,7 +320,7 @@ function currentColor(n) {
 //related post change not available imange yt only
 function getdata2() {
 	if(localStorage.data != undefined) {
-		var d=JSON.parse(window.atob(localStorage.data)); 
+		var d=JSON.parse(decodeURIComponent(escape(window.atob(localStorage.data)))); 
 		var n = $('#related-posts');
 		var m = n[0].querySelectorAll('img');
 		var o = $('.related-title');
@@ -360,7 +360,7 @@ function relatedImageChange(data) {
 
 function getdata1() {
 	if(localStorage.data != undefined) {
-		var d=JSON.parse(window.atob(localStorage.data)); 
+		var d=JSON.parse(decodeURIComponent(escape(window.atob(localStorage.data)))); 
 		var g = $('.blog-posts,.hfeed');
 		var k = g[0].querySelectorAll('img');
 		var l = g[0].querySelectorAll('.title-overlay');
