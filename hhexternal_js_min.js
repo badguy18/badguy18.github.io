@@ -73,7 +73,7 @@ function getYid() {
 function getdata(result) {
 	if(localStorage.data != undefined) {
 		var d=JSON.parse(window.atob(localStorage.data)); 
-		var h = document.querySelector(".post-title .entry-title").textContent.trim();		
+		var h = document.querySelector(".post-title, .entry-title").textContent.trim();		
 		var ids = [];
 		var c = 0;
 		for (var i = 0; i < d.length; i++) {
@@ -102,7 +102,7 @@ function getdata(result) {
 function result(data, status) {
 	var d = data.values; 
 	if (typeof(Storage) !== "undefined") {localStorage.setItem("data",window.btoa(unescape(encodeURIComponent(JSON.stringify(d)))));}
-	var h = document.querySelector(".post-title .entry-title").textContent.trim();
+	var h = document.querySelector(".post-title, .entry-title").textContent.trim();
 	var ids = [];
 	var c = 0;
 	for (var i = 0; i < d.length; i++) {
